@@ -27,3 +27,11 @@ Route::get('/view', function () {
     return view('form');
 });
 Route::post('view/slug', 'InsertController@insert');
+Route::get('/encm', function () {
+    return view('encform');
+});
+Route::post('enc', 'encController@insert');
+Route::get('encview', function()
+{
+	return view('encview');
+});
