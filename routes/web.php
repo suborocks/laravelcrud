@@ -31,7 +31,7 @@ Route::get('/encm', function () {
     return view('encform');
 });
 Route::post('enc', 'encController@insert');
-Route::get('encview', function()
-{
-	return view('encview');
-});
+Route::get('encview','encController@read');
+Route::get('/encedit/{id}','encController@edit');
+Route::post('encupdate/{id}','encController@update');
+Route::get('/encdelete/{id}', 'encController@delete');
